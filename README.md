@@ -6,4 +6,4 @@ Remote controller for old YDKJ games.
 2. Host (player with the game) click start server
 3. Other players connect using his local ip address (from Hamach / Radmin VPN)
 
-### Use HOME button to immediatly close the programm!
+### Use HOME button to immediatly close the program!
