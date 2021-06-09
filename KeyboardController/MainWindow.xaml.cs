@@ -73,7 +73,7 @@ namespace KeyboardController {
             } catch (Exception e) {
                 Error.Content = e.Message;
             }
-        }//26.58.102.168
+        }
 
         public void StopClient(object sender, RoutedEventArgs routedEventArgs) {
             if (client != null) {
