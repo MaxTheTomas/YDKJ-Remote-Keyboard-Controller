@@ -23,10 +23,17 @@ namespace KeyboardController {
                         if (a.Key.ToString().Length == 1) {
                             client.Send(a.Key.ToString());
                         }
-                        if (a.Key.ToString().Length == 2) {
-                            if (int.TryParse(a.Key.ToString().Remove(0, 1), out _)) {
-                                client.Send(a.Key.ToString().Replace("D", ""));
-                            }
+                        else if (a.Key.ToString().Length == 2 && a.Key.ToString().StartsWith("D")) {
+                            client.Send(a.Key.ToString().Replace("D", ""));
+                        }
+                        else if (a.Key == Key.Enter || a.Key == Key.Return)
+                            client.Send("{Enter}");
+                        else if (a.Key == Key.Back)
+                            client.Send("{Backspace}");
+                        else if (a.Key == Key.Space)
+                            client.Send(" ");
+                        else {
+                            client.Send("{" + a.Key + "}");
                         }
                     }
                 }
@@ -61,15 +68,17 @@ namespace KeyboardController {
             
             try {
                 client = new WebSocket($"ws://{IpBox.Text}:8001/");
+                client.OnClose += (s, a) => StopClient(null, null); 
                 client.Connect();
             } catch (Exception e) {
                 Error.Content = e.Message;
             }
-        }
+        }//26.58.102.168
 
         public void StopClient(object sender, RoutedEventArgs routedEventArgs) {
             if (client != null) {
-                client.Close();
+                if (client.IsAlive)
+                    client.Close();
                 client = null;
             }
             

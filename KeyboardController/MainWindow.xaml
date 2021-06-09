@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KeyboardController"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="225" Width="500">
+        Title="Коннектор клавиатуры для старых YDKJ" Height="225" Width="500">
     <Canvas>
         <Label Margin="10" Content="IP"/>
         <TextBox Margin="30 15" Width="180" Name="IpBox"/>
