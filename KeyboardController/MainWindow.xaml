@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:KeyboardController"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Коннектор клавиатуры для старых YDKJ" Height="225" Width="500">
+        Title="Keyboard Controller for YDKJ Games (made by MaxTheTomas)" Height="225" Width="500">
     <Canvas>
         <Label Margin="10" Content="IP"/>
         <TextBox Margin="30 15" Width="180" Name="IpBox"/>
         <Label Name="Error" FontWeight="Bold" Margin="10 30" Foreground="Red"/>
-        <Button Name="StartC" Margin="10 130" Width="200" Height="20" Click="StartClient">Запустить клиент</Button>
-        <Button Name="StopC" Margin="10 155" Width="200" Height="20" Click="StopClient">Остановить клиент</Button>
+        <Button Name="StartC" Margin="10 130" Width="200" Height="20" Click="StartClient">Start client</Button>
+        <Button Name="StopC" Margin="10 155" Width="200" Height="20" Click="StopClient">Stop Client</Button>
         
         
-        <Button Name="StartS" Margin="270 130" Width="200" Height="20" Click="StartServer">Запустить сервер</Button>
-        <Button Name="StopS" Margin="270 155" Width="200" Height="20" Click="StopServer">Остановить сервер</Button>
+        <Button Name="StartS" Margin="270 130" Width="200" Height="20" Click="StartServer">Start Server</Button>
+        <Button Name="StopS" Margin="270 155" Width="200" Height="20" Click="StopServer">Stop Server</Button>
     </Canvas>
 </Window>
